@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="288.0" prefWidth="400.0" />
+      <Accordion>
+        <panes>
+          <TitledPane animated="false" prefHeight="238.0" prefWidth="384.0" text="Добавить книгу">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="422.0">
+                     <children>
+                        <Text layoutX="53.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" />
+                        <Text layoutX="53.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Год" />
+                        <Text layoutX="53.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Автор" />
+                        <Text layoutX="52.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена" />
+                        <Button layoutX="183.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#addBook" text="Добавить" />
+                        <TextField fx:id="name" layoutX="143.0" layoutY="29.0" />
+                        <TextField fx:id="year" layoutX="143.0" layoutY="56.0" />
+                        <TextField fx:id="author" layoutX="143.0" layoutY="83.0" />
+                        <TextField fx:id="price" layoutX="143.0" layoutY="110.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="0.0" prefWidth="403.0" text="Новое бронирование">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="26.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Книга" />
+                        <Text layoutX="26.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Читатель" />
+                        <Text layoutX="27.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кол-во дней" />
+                        <Text layoutX="27.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена" />
+                        <Text fx:id="totalPrice" fill="#4aa420" layoutX="116.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0р">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="219.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#addBooking" text="Забронировать" />
+                        <Text fx:id="status" layoutX="30.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="343.13671875" />
+                        <Button layoutX="90.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#calculate" text="Рассчет стоимости" />
+                        <ComboBox fx:id="booksMenu" layoutX="114.0" layoutY="23.0" prefWidth="150.0" />
+                        <ComboBox fx:id="readersMenu" layoutX="114.0" layoutY="51.0" prefWidth="150.0" />
+                        <ComboBox fx:id="duration" layoutX="114.0" layoutY="79.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Добавить читателя">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="FIO" layoutX="126.0" layoutY="35.0" />
+                        <TextField fx:id="balance" layoutX="126.0" layoutY="81.0" />
+                        <Text layoutX="62.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО" />
+                        <Text layoutX="62.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Баланс" />
+                        <Button layoutX="166.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#addReader" text="Добавить" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
